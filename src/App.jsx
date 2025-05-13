@@ -18,11 +18,12 @@ function App() {
       </div>
       <h1>本網站使用Vite + React開發</h1>
       <h2>我的第一個元件</h2>
-      <MySlider/>
-     {/* <div>
-        <p>R:<MySlider/></p>
-        <p>B:<MySlider/></p>
-      </div>*/}
+      <h4 id="name">5b1g0027呂祐宗</h4>
+      <div>
+        <p>Red:<MySlider/></p>
+        <p>Green:<MySlider/></p>
+        <p>Blue:<MySlider/></p>
+      </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
