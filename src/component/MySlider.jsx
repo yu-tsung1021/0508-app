@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './MySlider.css';
 
 function MySlider() {
     const [value, setValue] = useState(128);
