@@ -19,15 +19,18 @@ function App() {
         </a>
       </div>
       <h1 style={{color:"brown"}}>5b1g0027呂祐宗</h1>
-      <h2>我的第一個元件：Slider</h2>
-      <div>
-        <p>R:<MySlider /></p>
-        <p>G:<MySlider /></p>
-        <p>B:<MySlider /></p>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: "40px" }}>
+        <div>
+          <h2 style={{marginBottom: "80px"}}>我的第一個元件：Slider</h2>
+          <p>R:<MySlider /></p>
+          <p>G:<MySlider /></p>
+          <p>B:<MySlider /></p>
+        </div>
+        <div>
+          <h2>第二個元件：RGB色彩面板</h2>
+          <MyPanel />
       </div>
-      <br/>
-      <h2>第二個元件：RGB色彩面板</h2>
-      <MyPanel />
+    </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
