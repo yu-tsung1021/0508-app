@@ -22,8 +22,10 @@ export default function Calculator() {
       // eslint-disable-next-line no-eval
       const res = eval(expr);
       setResult(res);
+      setExpr(res.toString()); // 更新輸入框為結果
     } catch {
       setResult("錯誤");
+      setExpr(""); // 清除輸入框
     }
   };
 
