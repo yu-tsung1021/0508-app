@@ -95,6 +95,7 @@ function MyPanel() {
         }}
       />
       <div>RGB({rr}, {gg}, {bb})</div>
+      <div>HSL({Math.round(h)}, {s}%, {Math.round(l * 100)}%)</div>
       <div>飽和度: {s}%</div>
     </div>
   );
