@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Calculator.css";
 
 export default function Calculator() {
   const [expr, setExpr] = useState(""); // 儲存算式
@@ -30,29 +31,29 @@ export default function Calculator() {
   };
 
   return (
-    <div style={{ border: "1px solid #ccc", padding: 16, width: 300, borderRadius: "16px" }}>
-      <h2>計算機</h2>
-      <div style={{ marginBottom: "10px" }}>
+    <div className="Calculator">
+      <h2 className="Calculator-title">計算機</h2>
+      <div className="Calculator-input-wrap">
         <input
           type="text"
           value={expr}
           readOnly
           placeholder="請輸入算式"
-          style={{ width: "220px", height: "30px", fontSize: "18px" }}
+          className="Calculator-input"
         />
       </div>
       {/* 數字與運算符號鍵盤 */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px", marginBottom: "10px" }}>
+      <div className="Calculator-keyboard">
         {[7,8,9,"+",4,5,6,"-",1,2,3,"*",0,".","/","C"].map(val => (
           val === "C"
-            ? <button key={val} onClick={handleClear}>清除</button>
-            : <button key={val} onClick={() => handleBtnClick(val.toString())}>{val}</button>
+            ? <button key={val} className="Calculator-btn Calculator-btn-clear" onClick={handleClear}>清除</button>
+            : <button key={val} className="Calculator-btn" onClick={() => handleBtnClick(val.toString())}>{val}</button>
         ))}
       </div>
       <div>
-        <button style={{ width: "100%" }} onClick={handleEqual}>=</button>
+        <button className="Calculator-btn-equal" onClick={handleEqual}>=</button>
       </div>
-      <div style={{ marginTop: "10px" }}>結果：{result !== null ? result : "—"}</div>
+      <div className="Calculator-result">結果：{result !== null ? result : "—"}</div>
     </div>
   );
 }

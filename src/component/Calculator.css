@@ -1,0 +1,72 @@
+.Calculator {
+    background-color: #5d7c9b;
+    border: 1px solid #151515;
+    padding: 16px;
+    width: 300px;
+    border-radius: 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.Calculator-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.Calculator-input-wrap {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.Calculator-input {
+    width: 220px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    padding: 2px 8px;
+    box-sizing: border-box;
+}
+.Calculator-keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.Calculator-btn {
+    padding: 8px 0;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #000; /* 字體顏色設為黑色 */
+}
+.Calculator-btn:hover {
+    background: #f5e0e0;
+    color : #000; /* 鼠標懸停時字體顏色仍為黑色 */
+}
+.Calculator-btn-clear {
+    background: #f8d7da;
+}
+.Calculator-btn-equal {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background: #4c6071;
+    cursor: pointer;
+    margin-top: 4px;
+    color:#000000;
+    transition: background 0.2s;
+}
+.Calculator-btn-equal:hover {
+    background: #f5b7b1;
+}
+.Calculator-result {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
