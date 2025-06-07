@@ -5,6 +5,8 @@ import './App.css'
 import MySlider from './rgb/MySlider'
 import MyPanel from './rgb/MyPanel'
 import Calculator from './component/Calculator';
+import TicTacToe from "./tic-tac-toe/TicTacToe";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -32,8 +34,10 @@ function App() {
         <div>
           <h2>第二個元件：RGB色彩面板</h2>
           <MyPanel />
-          <div>
-          </div>
+        </div> 
+        <div>
+          <h2>第四個元件:井字遊戲</h2>
+          { <TicTacToe /> }
         </div>
       </div>
       <div className="card">
